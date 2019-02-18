@@ -129,7 +129,8 @@ console.log(person.age);
 console.log(person.postalCode);
 delete person.postalCode;
 console.log(person.postalCode);
-
+person.breakfast = 'milo';
+console.log(person);
 // anonymous aka arrow function
 setTimeout(()=>{
     console.log(1+1);
@@ -272,3 +273,25 @@ Promise.resolve('Success').then(function(value) {
 }, function(value) {
     // not called
 });
+
+
+var person = {
+    firstName : 'Kenneth',
+    lastName: "Phang",
+    age: 18,
+    'my house': 'amk',
+    gender: 'M',
+    postalCode: 566344
+}
+
+console.log(person.age);
+console.log(person.gender);
+console.log(person['age']);
+console.log(person['my house']);
+person.age = 40;
+console.log(person.age);
+console.log(person.postalCode);
+delete person.postalCode;
+console.log(person.postalCode);
+person.breakfast = 'milo';
+console.log(person);

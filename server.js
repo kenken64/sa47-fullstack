@@ -26,3 +26,28 @@ app.listen(PORT, ()=>{
 })
 
 console.log("dsakjfdhskjdfh");
+
+function test(){
+    console.log("");
+}
+
+// pass by function
+setTimeout(test, 1000);
+
+// anonymous function
+setTimeout(function(){
+    console.log("");
+}, 1000)
+
+//arrow function
+setTimeout(()=>{
+    console.log("");
+}, 1000);
+
+if(x){
+
+}else{
+
+}
+
+x? "":"";
