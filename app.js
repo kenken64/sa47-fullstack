@@ -227,3 +227,48 @@ function Person2(firstname, lastname, age, gender){
 var p2 = new Person2('Kenneth', 'Phang', 42, 'M');
 console.log(p2.age);
 
+class Animal {
+    constructor(noOfLegs, colour, shape){
+        this.noOfLegs = noOfLegs;
+        this.colour = colour;
+        this.shape = shape;
+    }
+
+    getAdditionalNoOfLegs(){
+        return this.noOfLegs +2;
+    }
+}
+
+var c = new Animal(4, 'brown', 'dog');
+console.log(c.noOfLegs);
+console.log(c.colour);
+console.log(c.getAdditionalNoOfLegs());
+
+
+class Cat extends Animal {
+    constructor(noOfLegs, colour, shape){
+        super(noOfLegs, colour,shape);
+    }
+
+    getBlackColour(){
+        return 'black';
+    }
+}
+
+var cc = new Cat(4, 'red', 'elephant');
+console.log("additional legs for cat > " + cc.getAdditionalNoOfLegs());
+
+const words = ['spray', 'comb', 'limit', 'chocolate', 'coffee'];
+
+const longwords = words.filter(word=> word.length > 6);
+console.log(longwords);
+
+const total = [1, 4, 5, 6].reduce((sum, value)=> sum+value, 0);
+console.log(total); //17
+
+// http call
+Promise.resolve('Success').then(function(value) {
+    console.log(value); // "Success"
+}, function(value) {
+    // not called
+});
