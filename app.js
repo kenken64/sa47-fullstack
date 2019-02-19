@@ -297,14 +297,14 @@ person.breakfast = 'milo';
 console.log(person);
 
 
-let val = 7
- 2: function createAdder() {
- 3:   function addNumbers(a, b) {
- 4:     let ret = a + b
- 5:     return ret
- 6:   }
- 7:   return addNumbers
- 8: }
- 9: let adder = createAdder()
-10: let sum = adder(val, 8)
-11: console.log('example of function returning a function: ', sum)
+let val = 7;
+function createAdder() {
+    function addNumbers(a, b) { 
+        let ret = a + b
+        return ret
+    }
+ return addNumbers
+}
+let adder = createAdder()
+let sum = adder(val, 8)
+console.log('example of function returning a function: ', sum)
